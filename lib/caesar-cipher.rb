@@ -18,12 +18,13 @@ end
 puts <<~HEREDOC
   Welcome to the CAESAR CIPHER Encryption Tool!
   This program allows you to Encrypt or Decrypt a message.
-  --------------
+  --------------------------------------------------------
   Instructions:
   1. Enter the string you want to encrypt when prompted.
   2. Enter a shift value (a number) that will be used to shift each letter in your message.
   3. Remember the shift value, as you will need it to decrypt the message later.
-  --------------
+  4. Positive shift for encryption & negative shift for decryption.
+  --------------------------------------------------------
 HEREDOC
 
 puts "> Enter string to encrypt."
@@ -32,4 +33,4 @@ string_from_user = gets.chomp
 puts "> Enter SHIFT, Decrypt NOTE: Add (-) before the shift to decypher the message."
 shift_from_user = gets.to_i
 
-p caesar_cipher(string_from_user, shift_from_user)
+puts caesar_cipher(string_from_user, shift_from_user)
